@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    </PropertyGroup>
+    <ItemGroup>
+        <ProjectReference Include="../Domain.Abstractions/Rocket.Surgery.Domain.Abstractions.csproj" />
+        <PackageReference Include="Rocket.Surgery.Extensions" />
+    </ItemGroup>
+</Project>

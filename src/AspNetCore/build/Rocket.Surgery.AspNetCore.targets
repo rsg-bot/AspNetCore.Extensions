@@ -1,0 +1,7 @@
+﻿<Project>
+    <Target Name="AddRocketSurgeryAspNetCoreMvcAttributes" BeforeTargets="CoreCompile">
+        <ItemGroup>
+            <AssemblyMetadata Include="FeatureFolderNamespace" Value="$(RootNamespace)" />
+        </ItemGroup>
+    </Target>
+</Project>
