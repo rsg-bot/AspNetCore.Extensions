@@ -1,4 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="../../src/AspNetCore/build/Rocket.Surgery.AspNetCore.props" />
     <PropertyGroup>
         <TargetFrameworks>netcoreapp3.0</TargetFrameworks>
     </PropertyGroup>
@@ -7,4 +8,5 @@
         <ProjectReference Include="..\..\src\AspNetCore\Rocket.Surgery.AspNetCore.csproj" />
         <PackageReference Include="Rocket.Surgery.AspNetCore.Hosting.Autofac" />
     </ItemGroup>
+    <Import Project="../../src/AspNetCore/build/Rocket.Surgery.AspNetCore.targets" />
 </Project>
