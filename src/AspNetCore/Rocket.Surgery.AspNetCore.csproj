@@ -1,9 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>netstandard2.0</TargetFrameworks>
+        <TargetFrameworks>netcoreapp3.0</TargetFrameworks>
     </PropertyGroup>
     <ItemGroup>
-        <ProjectReference Include="../Domain.Abstractions/Rocket.Surgery.Domain.Abstractions.csproj" />
-        <PackageReference Include="Rocket.Surgery.Extensions" />
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+        <PackageReference Include="Rocket.Surgery.Build.Information" />
+        <PackageReference Include="Rocket.Surgery.Conventions.Abstractions" />
+        <PackageReference Include="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" />
+        <PackageReference Include="Rocket.Surgery.Extensions.Abstractions" />
+        <PackageReference Include="NodaTime" />
+        <PackageReference Include="NodaTime.Serialization.JsonNet" />
     </ItemGroup>
 </Project>

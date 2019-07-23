@@ -1,9 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>netcoreapp2.0;netcoreapp2.1</TargetFrameworks>
+        <TargetFrameworks>netcoreapp3.0</TargetFrameworks>
     </PropertyGroup>
     <ItemGroup>
-        <ProjectReference Include="..\..\src\AspNetCore.Mvc\Rocket.Surgery.AspNetCore.Mvc.csproj" />
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+        <ProjectReference Include="..\..\src\AspNetCore\Rocket.Surgery.AspNetCore.csproj" />
         <PackageReference Include="Rocket.Surgery.AspNetCore.Hosting.Autofac" />
     </ItemGroup>
 </Project>

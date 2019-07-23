@@ -13,9 +13,14 @@
     <PackageReference Update="ReportGenerator" Version="4.2.10" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Update="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0-preview6.19307.2" />
+    <PackageReference Update="Rocket.Surgery.Conventions.Abstractions" Version="6.2.2" />
+    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="6.0.3" />
+    <PackageReference Update="Rocket.Surgery.Extensions.Abstractions" Version="1.0.2-beta.19" />
+    <PackageReference Update="Rocket.Surgery.AspNetCore.Hosting.Autofac" Version="2.1.2" />
+    <PackageReference Update="Rocket.Surgery.Build.Information" Version="3.3.6" />
     <PackageReference Update="NodaTime" Version="2.4.6" />
-    <PackageReference Update="Rocket.Surgery.Extensions" Version="1.0.1" />
+    <PackageReference Update="NodaTime.Serialization.JsonNet" Version="2.2.0" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Update="Rocket.Surgery.Extensions.Testing" Version="1.1.11" />
