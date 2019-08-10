@@ -14,8 +14,8 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0-preview7.19365.7" />
-    <PackageReference Update="Rocket.Surgery.Conventions.Abstractions" Version="6.3.0" />
-    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="6.0.4" />
+    <PackageReference Update="Rocket.Surgery.Conventions.Abstractions" Version="6.3.1" />
+    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="6.0.5" />
     <PackageReference Update="Rocket.Surgery.Extensions.Abstractions" Version="1.0.3" />
     <PackageReference Update="Rocket.Surgery.AspNetCore.Hosting.Autofac" Version="2.1.2" />
     <PackageReference Update="Rocket.Surgery.Build.Information" Version="3.3.9" />
