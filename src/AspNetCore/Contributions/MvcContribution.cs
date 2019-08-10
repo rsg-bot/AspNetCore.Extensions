@@ -1,14 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 using Rocket.Surgery.AspNetCore.Mvc.Conventions;
 using Rocket.Surgery.AspNetCore.Mvc.Views;
 using Rocket.Surgery.Conventions;
 using Rocket.Surgery.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using NodaTime.Serialization.JsonNet;
-using NodaTime;
 using Rocket.Surgery.AspNetCore.Mvc.Filters;
 using Newtonsoft.Json.Serialization;
 using Microsoft.AspNetCore.Mvc.Razor;
@@ -31,9 +27,6 @@ namespace Rocket.Surgery.AspNetCore.Mvc.Conventions
         /// TODO Edit XML Comment Template for Register
         public void Register(IServiceConventionContext context)
         {
-            context.Services.AddSingleton(_ =>
-                _.GetRequiredService<IOptions<MvcNewtonsoftJsonOptions>>().Value.SerializerSettings);
-
             context.Services.Configure<RazorViewEngineOptions>(options =>
             {
                 // {0} - Action Name
@@ -58,13 +51,6 @@ namespace Rocket.Surgery.AspNetCore.Mvc.Conventions
             {
                 options.Conventions.Add(new FeatureConvention());
                 options.Filters.Add<NotFoundExceptionFilter>();
-            });
-
-            context.Services.Configure<MvcNewtonsoftJsonOptions>(options =>
-            {
-
-                options.SerializerSettings.ConfigureForNodaTime(DateTimeZoneProviders.Tzdb);
-                options.SerializerSettings.Converters.Add(new StringEnumConverter(new CamelCaseNamingStrategy(), true));
             });
         }
 

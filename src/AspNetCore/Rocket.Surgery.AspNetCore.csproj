@@ -3,13 +3,12 @@
         <TargetFrameworks>netcoreapp3.0</TargetFrameworks>
     </PropertyGroup>
     <ItemGroup>
+        <None Include="build/*.*" Pack="true" PackagePath="build" />
+        <None Include="buildMultiTargeting/*.*" Pack="true" PackagePath="buildMultiTargeting" />
         <FrameworkReference Include="Microsoft.AspNetCore.App" />
-        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
         <PackageReference Include="Rocket.Surgery.Build.Information" />
         <PackageReference Include="Rocket.Surgery.Conventions.Abstractions" />
         <PackageReference Include="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" />
         <PackageReference Include="Rocket.Surgery.Extensions.Abstractions" />
-        <PackageReference Include="NodaTime" />
-        <PackageReference Include="NodaTime.Serialization.JsonNet" />
     </ItemGroup>
 </Project>
