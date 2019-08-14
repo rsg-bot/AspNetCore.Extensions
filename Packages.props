@@ -10,16 +10,16 @@
   <ItemGroup>
     <PackageReference Update="Nuke.Common" Version="0.21.2" />
     <PackageReference Update="Rocket.Surgery.Nuke.DotNetCore" Version="0.3.5" />
-    <PackageReference Update="GitVersion.CommandLine.DotNetCore" Version="5.0.1-beta1.14" />
-    <PackageReference Update="ReportGenerator" Version="4.2.12" />
+    <PackageReference Update="GitVersion.CommandLine.DotNetCore" Version="5.0.1" />
+    <PackageReference Update="ReportGenerator" Version="4.2.15" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0-preview7.19365.7" />
-    <PackageReference Update="Rocket.Surgery.Conventions.Abstractions" Version="6.3.1" />
-    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="6.0.5" />
+    <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0-preview8.19405.7" />
+    <PackageReference Update="Rocket.Surgery.Conventions.Abstractions" Version="7.0.1" />
+    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="7.0.1" />
     <PackageReference Update="Rocket.Surgery.Extensions.Abstractions" Version="1.0.3" />
     <PackageReference Update="Rocket.Surgery.AspNetCore.Hosting.Autofac" Version="2.1.2" />
-    <PackageReference Update="Rocket.Surgery.Build.Information" Version="3.3.9" />
+    <PackageReference Update="Rocket.Surgery.Build.Information" Version="3.3.10" />
     <PackageReference Update="NodaTime" Version="2.4.6" />
     <PackageReference Update="NodaTime.Serialization.JsonNet" Version="2.2.0" />
   </ItemGroup>
