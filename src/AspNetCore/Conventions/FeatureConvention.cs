@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Rocket.Surgery.Build.Information;
@@ -32,18 +32,18 @@ namespace Rocket.Surgery.AspNetCore.Mvc.Conventions
         {
             var assemblyInformationProvider = new InformationProvider(controller.ControllerType.Assembly);
             var possibleNamespaces = assemblyInformationProvider.GetValue("FeatureFolderNamespace")
-                .Concat(new[] { controller.ControllerType.Assembly.GetName().Name });
+                .Concat(new[] { controller.ControllerType.Assembly.GetName().Name! });
 
             foreach (var @namespace in possibleNamespaces)
             {
-                var controllerFullName = controller.ControllerType.FullName;
+                var controllerFullName = controller.ControllerType.FullName!;
                 if (controllerFullName.StartsWith(@namespace, StringComparison.OrdinalIgnoreCase))
                 {
                     var featureName = controllerFullName.Substring(@namespace.Length + 1);
                     if (featureName.Contains("."))
                     {
                         var items = featureName.Split('.');
-                        return items[items.Length - 2];
+                        return items[^2];
                     }
                     return controller.ControllerName;
                 }
