@@ -6,7 +6,7 @@
     <ItemGroup>
         <FrameworkReference Include="Microsoft.AspNetCore.App" />
         <ProjectReference Include="..\..\src\AspNetCore\Rocket.Surgery.AspNetCore.csproj" />
-        <PackageReference Include="Rocket.Surgery.AspNetCore.Hosting.Autofac" />
+        <!-- <PackageReference Include="Rocket.Surgery.AspNetCore.Hosting.Autofac" /> -->
     </ItemGroup>
     <Import Project="../../src/AspNetCore/build/Rocket.Surgery.AspNetCore.targets" />
 </Project>
