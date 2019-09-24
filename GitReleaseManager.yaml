@@ -6,7 +6,7 @@
 export:
   include-created-date-in-title: false
   perform-regex-removal: true
-  regex-text: '[a-f\d]{40}\s'4
+  regex-text: '([a-f\d]{40}\s|:boom:|:rocket:|:fire:|:blue_book:|:beetle:|:squirrel:|:raised_hand:|:sparkles:)'4
 issue-labels-include:
   - ":boom: breaking change"
   - ":rocket: feature"
