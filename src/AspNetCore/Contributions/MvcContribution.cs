@@ -6,7 +6,6 @@ using Rocket.Surgery.Conventions;
 using Rocket.Surgery.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Rocket.Surgery.AspNetCore.Mvc.Filters;
-using Newtonsoft.Json.Serialization;
 using Microsoft.AspNetCore.Mvc.Razor;
 
 [assembly: Convention(typeof(AspNetCoreConvention))]
