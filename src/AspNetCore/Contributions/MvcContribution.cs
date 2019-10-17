@@ -27,9 +27,13 @@ namespace Rocket.Surgery.AspNetCore.Mvc.Conventions
         /// TODO Edit XML Comment Template for Register
         public void Register(IServiceConventionContext context)
         {
+            var coreBuilder = context.Services
+                .AddMvcCore()
+                .AddControllersAsServices()
+                .AddApiExplorer();
             foreach (var item in context.AssemblyCandidateFinder.GetCandidateAssemblies("Rocket.Surgery.AspNetCore", "Microsoft.AspNetCore.Mvc"))
             {
-                context.Services.AddMvcCore()
+                coreBuilder
                     .AddApplicationPart(item);
             }
 
