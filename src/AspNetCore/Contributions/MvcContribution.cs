@@ -7,6 +7,7 @@ using Rocket.Surgery.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Rocket.Surgery.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.Razor;
+using Rocket.Surgery.Conventions.Reflection;
 
 [assembly: Convention(typeof(AspNetCoreConvention))]
 
@@ -26,6 +27,16 @@ namespace Rocket.Surgery.AspNetCore.Mvc.Conventions
         /// TODO Edit XML Comment Template for Register
         public void Register(IServiceConventionContext context)
         {
+            var coreBuilder = context.Services
+                .AddMvcCore()
+                .AddControllersAsServices()
+                .AddApiExplorer();
+            foreach (var item in context.AssemblyCandidateFinder.GetCandidateAssemblies("Rocket.Surgery.AspNetCore", "Microsoft.AspNetCore.Mvc"))
+            {
+                coreBuilder
+                    .AddApplicationPart(item);
+            }
+
             context.Services.Configure<RazorViewEngineOptions>(options =>
             {
                 // {0} - Action Name
