@@ -11,7 +11,7 @@
     <PackageReference Update="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0" />
     <PackageReference Update="Rocket.Surgery.Conventions.Abstractions" Version="9.0.5" />
     <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="9.0.5" />
-    <PackageReference Update="Rocket.Surgery.Extensions.Abstractions" Version="2.0.0" />
+    <PackageReference Update="Rocket.Surgery.Extensions.Abstractions" Version="2.0.1" />
     <PackageReference Update="Rocket.Surgery.Build.Information" Version="3.3.11" />
     <PackageReference Update="NodaTime" Version="2.4.7" />
     <PackageReference Update="NodaTime.Serialization.JsonNet" Version="2.2.0" />
