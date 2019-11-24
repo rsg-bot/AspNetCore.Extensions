@@ -1,0 +1,18 @@
+Rocket.Surgery.AspNetCore.Contributions.AspNetCoreConvention
+Rocket.Surgery.AspNetCore.Contributions.AspNetCoreConvention.AspNetCoreConvention() -> void
+Rocket.Surgery.AspNetCore.Contributions.AspNetCoreConvention.Register(Rocket.Surgery.Extensions.DependencyInjection.IServiceConventionContext context) -> void
+Rocket.Surgery.AspNetCore.Conventions.FeatureConvention
+Rocket.Surgery.AspNetCore.Conventions.FeatureConvention.Apply(Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerModel controller) -> void
+Rocket.Surgery.AspNetCore.Conventions.FeatureConvention.FeatureConvention() -> void
+Rocket.Surgery.AspNetCore.Filters.NotFoundExceptionFilter
+Rocket.Surgery.AspNetCore.Filters.NotFoundExceptionFilter.NotFoundExceptionFilter() -> void
+Rocket.Surgery.AspNetCore.Filters.NotFoundExceptionFilter.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext context) -> void
+Rocket.Surgery.AspNetCore.Filters.NotFoundExceptionFilter.OnExceptionAsync(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext context) -> System.Threading.Tasks.Task
+Rocket.Surgery.AspNetCore.Filters.RequestExceptionFilter
+Rocket.Surgery.AspNetCore.Filters.RequestExceptionFilter.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext context) -> void
+Rocket.Surgery.AspNetCore.Filters.RequestExceptionFilter.OnExceptionAsync(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext context) -> System.Threading.Tasks.Task
+Rocket.Surgery.AspNetCore.Filters.RequestExceptionFilter.RequestExceptionFilter(Microsoft.AspNetCore.Mvc.Infrastructure.ProblemDetailsFactory problemDetailsFactory) -> void
+Rocket.Surgery.AspNetCore.Views.FeatureViewLocationExpander
+Rocket.Surgery.AspNetCore.Views.FeatureViewLocationExpander.ExpandViewLocations(Microsoft.AspNetCore.Mvc.Razor.ViewLocationExpanderContext context, System.Collections.Generic.IEnumerable<string> viewLocations) -> System.Collections.Generic.IEnumerable<string>
+Rocket.Surgery.AspNetCore.Views.FeatureViewLocationExpander.FeatureViewLocationExpander() -> void
+Rocket.Surgery.AspNetCore.Views.FeatureViewLocationExpander.PopulateValues(Microsoft.AspNetCore.Mvc.Razor.ViewLocationExpanderContext context) -> void

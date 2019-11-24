@@ -1,9 +1,10 @@
 using System;
 using System.Linq;
+using JetBrains.Annotations;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Rocket.Surgery.Build.Information;
 
-namespace Rocket.Surgery.AspNetCore.Mvc.Conventions
+namespace Rocket.Surgery.AspNetCore.Conventions
 {
     /// <summary>
     /// Class FeatureConvention.
@@ -13,12 +14,17 @@ namespace Rocket.Surgery.AspNetCore.Mvc.Conventions
     public class FeatureConvention : IControllerModelConvention
     {
         /// <summary>
-        /// Called to apply the convention to the <see cref="T:Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerModel" />.
+        /// Called to apply the convention to the <see cref="ControllerModel" />.
         /// </summary>
-        /// <param name="controller">The <see cref="T:Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerModel" />.</param>
+        /// <param name="controller">The <see cref="ControllerModel" />.</param>
         /// TODO Edit XML Comment Template for Apply
-        public void Apply(ControllerModel controller)
+        public void Apply([NotNull] ControllerModel controller)
         {
+            if (controller == null)
+            {
+                throw new ArgumentNullException(nameof(controller));
+            }
+
             controller.Properties.Add("feature", GetFeatureName(controller));
         }
 
@@ -40,7 +46,7 @@ namespace Rocket.Surgery.AspNetCore.Mvc.Conventions
                 if (controllerFullName.StartsWith(@namespace, StringComparison.OrdinalIgnoreCase))
                 {
                     var featureName = controllerFullName.Substring(@namespace.Length + 1);
-                    if (featureName.Contains("."))
+                    if (featureName.Contains(".", StringComparison.Ordinal))
                     {
                         var items = featureName.Split('.');
                         return items[^2];

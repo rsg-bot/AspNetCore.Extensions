@@ -1,17 +1,19 @@
+using System;
+using JetBrains.Annotations;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.DependencyInjection;
-using Rocket.Surgery.AspNetCore.Mvc.Conventions;
-using Rocket.Surgery.AspNetCore.Mvc.Views;
-using Rocket.Surgery.Conventions;
-using Rocket.Surgery.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
-using Rocket.Surgery.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.Extensions.DependencyInjection;
+using Rocket.Surgery.AspNetCore.Contributions;
+using Rocket.Surgery.AspNetCore.Conventions;
+using Rocket.Surgery.AspNetCore.Filters;
+using Rocket.Surgery.AspNetCore.Views;
+using Rocket.Surgery.Conventions;
 using Rocket.Surgery.Conventions.Reflection;
+using Rocket.Surgery.Extensions.DependencyInjection;
 
 [assembly: Convention(typeof(AspNetCoreConvention))]
 
-namespace Rocket.Surgery.AspNetCore.Mvc.Conventions
+namespace Rocket.Surgery.AspNetCore.Contributions
 {
     /// <summary>
     /// Class MvcConvention.
@@ -25,8 +27,13 @@ namespace Rocket.Surgery.AspNetCore.Mvc.Conventions
         /// </summary>
         /// <param name="context">The context.</param>
         /// TODO Edit XML Comment Template for Register
-        public void Register(IServiceConventionContext context)
+        public void Register([NotNull] IServiceConventionContext context)
         {
+            if (context == null)
+            {
+                throw new ArgumentNullException(nameof(context));
+            }
+
             var coreBuilder = context.Services
                 .AddMvcCore()
                 .AddControllersAsServices()
@@ -61,6 +68,7 @@ namespace Rocket.Surgery.AspNetCore.Mvc.Conventions
             {
                 options.Conventions.Add(new FeatureConvention());
                 options.Filters.Add<NotFoundExceptionFilter>();
+                options.Filters.Add<RequestExceptionFilter>();
             });
         }
 

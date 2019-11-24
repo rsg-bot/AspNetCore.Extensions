@@ -1,8 +1,9 @@
-﻿using System.Threading.Tasks;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+// ReSharper disable ClassNeverInstantiated.Global
 
-namespace Rocket.Surgery.AspNetCore.Mvc.Filters
+namespace Rocket.Surgery.AspNetCore.Filters
 {
     /// <summary>
     /// Not found exception that catches not found messages that might have been thrown by calling code.
@@ -12,10 +13,11 @@ namespace Rocket.Surgery.AspNetCore.Mvc.Filters
         /// <inheritdoc />
         public void OnException(ExceptionContext context)
         {
-            if (!(context.Exception is NotFoundException)) return;
-
-            context.ExceptionHandled = true;
-            context.Result = new NotFoundResult();
+            if (context?.Exception is NotFoundException)
+            {
+                context.ExceptionHandled = true;
+                context.Result = new NotFoundResult();
+            }
         }
 
         /// <inheritdoc />
