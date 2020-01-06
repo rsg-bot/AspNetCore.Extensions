@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>netcoreapp3.0</TargetFrameworks>
+        <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
         <PackageDescription>Provides feature folders via convention to a Rocket Surgery Web Application</PackageDescription>
         <PackageTags>$(PackageTags);feature folders;feature</PackageTags>
     </PropertyGroup>
