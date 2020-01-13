@@ -43,8 +43,7 @@ namespace Rocket.Surgery.AspNetCore
                 options =>
                 {
                     options.SerializerSettings.Converters.Add(new StringEnumConverter(new CamelCaseNamingStrategy()));
-                    options.SerializerSettings
-                       .ConfigureForNodaTime(DateTimeZoneProviders.Tzdb);
+                    options.SerializerSettings.ConfigureForNodaTime(DateTimeZoneProviders.Tzdb);
                 }
             );
         }
