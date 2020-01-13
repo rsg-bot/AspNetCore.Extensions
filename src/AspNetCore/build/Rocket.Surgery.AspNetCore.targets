@@ -1,4 +1,5 @@
 ﻿<Project>
+    <Sdk Name="Rocket.Surgery.MSBuild.Metadata" Version="0.2.0" />
     <Target Name="AddRocketSurgeryAspNetCoreMvcAttributes" BeforeTargets="CoreCompile">
         <ItemGroup>
             <AssemblyMetadata Include="FeatureFolderNamespace" Value="$(RootNamespace)" />
