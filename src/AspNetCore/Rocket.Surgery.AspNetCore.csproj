@@ -12,5 +12,7 @@
         <PackageReference Include="Rocket.Surgery.Conventions.Abstractions" />
         <PackageReference Include="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" />
         <PackageReference Include="Rocket.Surgery.Extensions.Abstractions" />
+        <PackageReference Include="NodaTime" />
+        <PackageReference Include="NodaTime.Serialization.SystemTextJson" />
     </ItemGroup>
 </Project>

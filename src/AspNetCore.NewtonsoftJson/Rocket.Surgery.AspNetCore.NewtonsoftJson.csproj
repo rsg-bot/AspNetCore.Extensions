@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
+        <PackageDescription>Provides feature folders via convention to a Rocket Surgery Web Application</PackageDescription>
+        <PackageTags>$(PackageTags);feature folders;feature</PackageTags>
+    </PropertyGroup>
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+        <PackageReference Include="NodaTime.Serialization.JsonNet" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+        <ProjectReference Include="../AspNetCore/Rocket.Surgery.AspNetCore.csproj" />
+    </ItemGroup>
+</Project>
