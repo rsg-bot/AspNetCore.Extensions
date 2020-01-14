@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Xml.XPath;
 using JetBrains.Annotations;
 using Microsoft.AspNetCore.Mvc;
@@ -39,6 +40,7 @@ namespace Rocket.Surgery.AspNetCore
             context.Services.Configure<JsonOptions>(
                 options =>
                 {
+                    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter(JsonNamingPolicy.CamelCase));
                     options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
                     options.JsonSerializerOptions.ConfigureForNodaTime(DateTimeZoneProviders.Tzdb);
                 }
