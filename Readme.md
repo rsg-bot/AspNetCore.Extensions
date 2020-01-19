@@ -9,17 +9,17 @@
 <!-- badges -->
 
 <!-- history badges -->
-| Azure Pipelines                                           | AppVeyor                                      |
-| --------------------------------------------------------- | --------------------------------------------- |
-| [![azurepipelines-badge]][azurepipelines]                 | [![appveyor-badge]][appveyor]                 |
+| Azure Pipelines | AppVeyor |
+| --------------- | -------- |
+| [![azurepipelines-badge]][azurepipelines] | [![appveyor-badge]][appveyor] |
 | [![azurepipelines-history-badge]][azurepipelines-history] | [![appveyor-history-badge]][appveyor-history] |
 <!-- history badges -->
 
 <!-- nuget packages -->
-| Package                                  | NuGet                                                                                          | MyGet                                                                                          |
-| ---------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| Rocket.Surgery.AspNetCore                | [![nuget-version-ef9nlfi+vtuw-badge]![nuget-downloads-ef9nlfi+vtuw-badge]][nuget-ef9nlfi+vtuw] | [![myget-version-ef9nlfi+vtuw-badge]![myget-downloads-ef9nlfi+vtuw-badge]][myget-ef9nlfi+vtuw] |
-| Rocket.Surgery.AspNetCore.NewtonsoftJson | [![nuget-version-y+ig1ul6kyha-badge]![nuget-downloads-y+ig1ul6kyha-badge]][nuget-y+ig1ul6kyha] | [![myget-version-y+ig1ul6kyha-badge]![myget-downloads-y+ig1ul6kyha-badge]][myget-y+ig1ul6kyha] |
+| Package | NuGet |
+| ------- | ----- |
+| Rocket.Surgery.AspNetCore | [![nuget-version-ef9nlfi+vtuw-badge]![nuget-downloads-ef9nlfi+vtuw-badge]][nuget-ef9nlfi+vtuw] |
+| Rocket.Surgery.AspNetCore.NewtonsoftJson | [![nuget-version-y+ig1ul6kyha-badge]![nuget-downloads-y+ig1ul6kyha-badge]][nuget-y+ig1ul6kyha] |
 <!-- nuget packages -->
 
 # Whats next?
@@ -44,15 +44,9 @@ TBD
 [nuget-ef9nlfi+vtuw]: https://www.nuget.org/packages/Rocket.Surgery.AspNetCore/
 [nuget-version-ef9nlfi+vtuw-badge]: https://img.shields.io/nuget/v/Rocket.Surgery.AspNetCore.svg?color=004880&logo=nuget&style=flat-square "NuGet Version"
 [nuget-downloads-ef9nlfi+vtuw-badge]: https://img.shields.io/nuget/dt/Rocket.Surgery.AspNetCore.svg?color=004880&logo=nuget&style=flat-square "NuGet Downloads"
-[myget-ef9nlfi+vtuw]: https://www.myget.org/feed/rocket-surgeons-guild/package/nuget/Rocket.Surgery.AspNetCore
-[myget-version-ef9nlfi+vtuw-badge]: https://img.shields.io/myget/rocket-surgeons-guild/vpre/Rocket.Surgery.AspNetCore.svg?label=myget&color=004880&logo=nuget&style=flat-square "MyGet Pre-Release Version"
-[myget-downloads-ef9nlfi+vtuw-badge]: https://img.shields.io/myget/rocket-surgeons-guild/dt/Rocket.Surgery.AspNetCore.svg?color=004880&logo=nuget&style=flat-square "MyGet Downloads"
 [nuget-y+ig1ul6kyha]: https://www.nuget.org/packages/Rocket.Surgery.AspNetCore.NewtonsoftJson/
 [nuget-version-y+ig1ul6kyha-badge]: https://img.shields.io/nuget/v/Rocket.Surgery.AspNetCore.NewtonsoftJson.svg?color=004880&logo=nuget&style=flat-square "NuGet Version"
 [nuget-downloads-y+ig1ul6kyha-badge]: https://img.shields.io/nuget/dt/Rocket.Surgery.AspNetCore.NewtonsoftJson.svg?color=004880&logo=nuget&style=flat-square "NuGet Downloads"
-[myget-y+ig1ul6kyha]: https://www.myget.org/feed/rocket-surgeons-guild/package/nuget/Rocket.Surgery.AspNetCore.NewtonsoftJson
-[myget-version-y+ig1ul6kyha-badge]: https://img.shields.io/myget/rocket-surgeons-guild/vpre/Rocket.Surgery.AspNetCore.NewtonsoftJson.svg?label=myget&color=004880&logo=nuget&style=flat-square "MyGet Pre-Release Version"
-[myget-downloads-y+ig1ul6kyha-badge]: https://img.shields.io/myget/rocket-surgeons-guild/dt/Rocket.Surgery.AspNetCore.NewtonsoftJson.svg?color=004880&logo=nuget&style=flat-square "MyGet Downloads"
 <!-- generated references -->
 
 <!-- nuke-data
@@ -66,6 +60,4 @@ azurepipelines:
 appveyor:
   account: RocketSurgeonsGuild
   build: aspnetcore-extensions
-myget:
-  account: rocket-surgeons-guild
 -->
